@@ -8,16 +8,25 @@ const Bird = require('../models/bird.js')
 //   res.render('index.ejs')
 // });
 
-router.get('/new', (req, res) => {
-  res.render('new.ejs')
-});
-
-
+//Index
 router.get('/', (req, res) => {
   Bird.find({}, (err, foundBirds) => {
     res.render('index.ejs', {
       birds: foundBirds
     });
+  });
+});
+
+//New
+router.get('/new', (req, res) => {
+  res.render('new.ejs')
+});
+
+
+//Delete
+router.delete("/:id", (req, res) => {
+  Bird.findByIdAndDelete(req.params.id, (err, data) => {
+    res.redirect("/");
   });
 });
 
