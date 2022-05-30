@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 const PORT = 3000;
-const birdsController = require('./controllers/birds');
+const birdsController = require('./controllers/birds.js');
 
 
 //Database Connection

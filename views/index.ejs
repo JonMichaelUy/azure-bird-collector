@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Bird Collector</h1>
+      <nav>
+        <ul>
+          <li><a href="/collection">My Collection</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <header>
-    <h1>Bird Collector</h1>
-    <nav>
+    <main>
       <ul>
-        <li><a href="/collection">My Collection</a></li>
+        <% for(let i=0; i<birds.length; i++) { %>
+        <li><img src="<%=birds[i].image%>" alt="photo of bird" /></li>
+        <li><%=birds[i].name%></li>
+        <li><%=birds[i].scientificName%></li>
+        <li><%=birds[i].description%></li>
+        console.log(${birds[i].name})
+        <% } %>
       </ul>
-    </nav>
-  </header>
+    </main>
 
-
-
-
-  <footer>
-    <nav>
-      <ul>
-        <li><a href="/new">Add Bird to Database</a></li>
-      </ul>
-    </nav>
-  </footer>
-</body>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="/new">Add Bird to Database</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
 </html>
