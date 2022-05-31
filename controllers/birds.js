@@ -34,12 +34,22 @@ router.delete('/:id', (req, res) => {
 
 
 router.post('/', (req, res) => {
+  if(req.body.addToCollection === 'on') {
+    req.body.addToCollection = true;
+  } else {
+    req.body.addToCollection = false;
+  }
   Bird.create(req.body, (err, createdBird) => {
     res.redirect('/')
   })
 })
 
 router.put('/:id', (req, res) => {
+  if(req.body.addToCollection === 'on') {
+    req.body.addToCollection = true;
+  } else {
+    req.body.addToCollection = false;
+  }
   Bird.findByIdAndUpdate(req.params.id, req.body, () => {
     res.redirect('/')
   })

@@ -7,6 +7,7 @@ const birdSchema = new Schema({
   scientificName: { type: String }, 
   description: { type: String }, 
   notes: { type: String }, 
+  addToCollection: Boolean,
 });
 
 const Bird = mongoose.model('Bird', birdSchema);

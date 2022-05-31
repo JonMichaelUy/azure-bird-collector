@@ -21,9 +21,12 @@
         <% for(let i=0; i<birds.length; i++) { %>
           <%=console.log(birds[i]._id)%>
           <li><a href="<%=birds[i]._id%>"><img src="<%=birds[i].image%>" alt=""></a></li>
+        <li>Collected:<%=birds[i].addToCollection%></li> 
         <li><%=birds[i].name%></li>
         <li><%=birds[i].scientificName%></li>
         <li><%=birds[i].description%></li>
+        <form action="/<%=birds[i].id%>?_method=DELETE" method="POST">
+          <input type="submit" value="DELETE" />
         <% } %>
       </ul>
     </main>
