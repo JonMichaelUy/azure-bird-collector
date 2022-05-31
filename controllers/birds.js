@@ -17,10 +17,23 @@ router.get('/', (req, res) => {
   });
 });
 
+router.get('/collection', (req, res) => {
+  Bird.find({}, (err, foundBirds) => {
+    console.log(Bird)
+    res.render('collection.ejs', {
+      birds: foundBirds
+    });
+  });
+});
+
+
+
 //New
 router.get('/new', (req, res) => {
   res.render('new.ejs')
 });
+
+
 
 
 //Delete
@@ -73,6 +86,8 @@ router.get('/:id', (req, res) => {
     });
   });
 });
+
+
 
 
 module.exports = router;
