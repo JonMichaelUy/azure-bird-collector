@@ -24,17 +24,30 @@ router.get('/new', (req, res) => {
 
 
 //Delete
-router.delete("/:id", (req, res) => {
+router.delete('/:id', (req, res) => {
   Bird.findByIdAndDelete(req.params.id, (err, data) => {
-    res.redirect("/");
+    res.redirect('/');
   });
 });
+
+
+
 
 router.post('/', (req, res) => {
   Bird.create(req.body, (err, createdBird) => {
     res.redirect('/')
   })
 })
+
+
+router.get('/:id', (req, res) => {
+  Bird.findById(req.params.id, (err, foundBird) => {
+    console.log(req.params.id)
+    res.render('show.ejs', {
+      bird: foundBird
+    });
+  });
+});
 
 
 module.exports = router;

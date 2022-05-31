@@ -31,9 +31,9 @@ app.use('/', birdsController)
 
 
 
-app.get('/', (req, res) => {
-  res.render('index.ejs')
-});
+// app.get('/', (req, res) => {
+//   res.render('index.ejs')
+// });
 
 app.listen(PORT, () => {
   console.log(`listening to port ${PORT}`)

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <header>
+    <h1>Bird Collector</h1>
+    <h3>Show page</h3>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/collection">My Collection</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <ul>
+      <li><img src="<%=bird.image%>" alt="photo of bird" /></li>
+      <li><%=bird.name%></li>
+      <li>Scientific Name:<%=bird.scientificName%></li>
+      <li>Description:<%=bird.description%></li>
+      <li>Notes:<%=bird.notes%></li>
+    </ul>
+  </main>
+ 
+
+</body>
+</html>
