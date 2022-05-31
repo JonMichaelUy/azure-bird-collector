@@ -39,7 +39,22 @@ router.post('/', (req, res) => {
   })
 })
 
+router.put('/:id', (req, res) => {
+  Bird.findByIdAndUpdate(req.params.id, req.body, () => {
+    res.redirect('/')
+  })
+})
 
+//Edit
+router.get ('/:id/edit', (req, res) => {
+  Bird.findById(req.params.id, (err, foundBird) => {
+    res.render('edit.ejs', {
+      bird: foundBird
+    });
+  });
+});
+
+//Show
 router.get('/:id', (req, res) => {
   Bird.findById(req.params.id, (err, foundBird) => {
     console.log(req.params.id)
