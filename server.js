@@ -2,10 +2,10 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 const express = require('express');
-const PORT = 3000;
 const birdsController = require('./controllers/birds.js');
 const app = express();
 const methodOverride = require("method-override");
+const PORT = process.env.PORT || 3000
 
 //Database Connection
 mongoose.connect(process.env.DATABASE_URL, {
@@ -35,6 +35,7 @@ app.use('/', birdsController)
 // app.get('/', (req, res) => {
 //   res.render('index.ejs')
 // });
+
 
 app.listen(PORT, () => {
   console.log(`listening to port ${PORT}`)
