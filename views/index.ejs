@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <%- include('./partials/head.ejs')%>
   </head>
   <body>
     <header>
@@ -19,7 +16,7 @@
     <main>
       <ul>
         <% for(let i=0; i<birds.length; i++) { %>
-          
+          <div class = "birds">
           <% if(birds[i].addToCollection === true) { %>
             <li>COLLECTED!</li>
             <li><a href="<%=birds[i]._id%>"><img class = "collected" src="<%=birds[i].image%>" alt=""></a></li>
@@ -34,6 +31,7 @@
         <li><%=birds[i].description%></li>
         <form action="/<%=birds[i].id%>?_method=DELETE" method="POST">
           <input type="submit" value="DELETE" />
+        </div>
         <% } %>
       </ul>
     </main>
