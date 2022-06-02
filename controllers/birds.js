@@ -27,13 +27,10 @@ router.get('/collection', (req, res) => {
 });
 
 
-
 //New
 router.get('/new', (req, res) => {
   res.render('new.ejs')
 });
-
-
 
 
 //Delete
@@ -43,8 +40,20 @@ router.delete('/:id', (req, res) => {
   });
 });
 
+//Update
 
+router.put('/:id', (req, res) => {
+  if(req.body.addToCollection === 'on') {
+    req.body.addToCollection = true;
+  } else {
+    req.body.addToCollection = false;
+  }
+  Bird.findByIdAndUpdate(req.params.id, req.body, () => {
+    res.redirect('/')
+  })
+})
 
+//Create
 
 router.post('/', (req, res) => {
   if(req.body.addToCollection === 'on') {
@@ -57,16 +66,6 @@ router.post('/', (req, res) => {
   })
 })
 
-router.put('/:id', (req, res) => {
-  if(req.body.addToCollection === 'on') {
-    req.body.addToCollection = true;
-  } else {
-    req.body.addToCollection = false;
-  }
-  Bird.findByIdAndUpdate(req.params.id, req.body, () => {
-    res.redirect('/')
-  })
-})
 
 //Edit
 router.get ('/:id/edit', (req, res) => {
@@ -86,6 +85,8 @@ router.get('/:id', (req, res) => {
     });
   });
 });
+
+
 
 
 

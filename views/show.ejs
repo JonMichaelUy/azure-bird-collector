@@ -7,7 +7,7 @@
   
   <header>
     <h1>Bird Collector</h1>
-    <h3>Show page</h3>
+    
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
@@ -17,12 +17,14 @@
   </header>
   
   <main>
-    <ul>
+    <h5><%=bird.name%></h5>
+    <ul style="sty">
       <li><img src="<%=bird.image%>" alt="photo of bird" /></li>
-      <li><%=bird.name%></li>
+      <div class = "showInfo">
       <li>Scientific Name:<%=bird.scientificName%></li>
       <li>Description:<%=bird.description%></li>
       <li>Notes:<%=bird.notes%></li>
+    </div>
     </ul>
   </main>
  
