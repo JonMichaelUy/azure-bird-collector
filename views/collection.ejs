@@ -6,6 +6,7 @@
   <body>
     <header>
       <h1>Bird Collector</h1>
+      <h3>My Collection</h3>
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
@@ -14,19 +15,22 @@
     </header>
 
     <main>
-      <ul>
+      <ul  style="list-style: none;">
+        <div class="mycollectiondiv">
         <% for(let i=0; i<birds.length; i++) { %>
           <% if(birds[i].addToCollection === true) { %>
             <li><a href="<%=birds[i]._id%>"><img class = "collected" src="<%=birds[i].image%>" alt=""></a></li>
-            <li><%=birds[i].name%></li>
-            <li><%=birds[i].scientificName%></li>
-            <li><%=birds[i].description%></li>
-            <li><%=birds[i].notes%></li>
+            <div class="mycollectiondiv2">
+            <li>NAME:  <%=birds[i].name%></li>
+            <li>SCIENTIFIC NAME:  <%=birds[i].scientificName%></li>
+            <li>DESCRIPTION:  <%=birds[i].description%></li>
+            <li>NOTES:  <%=birds[i].notes%></li>
+          </div>
         
         
         <% } %>
         <% } %>
-        
+      </div>
       </ul>
     </main>
 

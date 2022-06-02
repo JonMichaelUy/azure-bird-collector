@@ -10,20 +10,22 @@
     
     <nav>
       <ul>
-        <li><a href="/">Home</a></li>
+        <div class="shownavdiv">
+        <li class="shownav"><a href="/">Home</a></li>
         <li><a href="/collection">My Collection</a></li>
+      </div>
       </ul>
     </nav>
   </header>
   
   <main>
     <h5><%=bird.name%></h5>
-    <ul style="sty">
+    <ul style="list-style: none;">
       <li><img src="<%=bird.image%>" alt="photo of bird" /></li>
       <div class = "showInfo">
-      <li>Scientific Name:<%=bird.scientificName%></li>
-      <li>Description:<%=bird.description%></li>
-      <li>Notes:<%=bird.notes%></li>
+      <li>Scientific Name: <%=bird.scientificName%></li>
+      <li>Description: <%=bird.description%></li>
+      <li>Notes: <%= bird.notes%></li>
     </div>
     </ul>
   </main>

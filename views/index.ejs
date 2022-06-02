@@ -20,12 +20,16 @@
           <% if(birds[i].addToCollection === true) { %>
            
             <li><a href="<%=birds[i]._id%>"><img class = "collected" id="indexpics" src="<%=birds[i].image%>" alt=""></a></li>
-            <li>COLLECTED!</li>
+            <li><%=birds[i].name%></li>
+            <li class="spotted">spotted!</li>
         <% } else { %>
            <li><a href="<%=birds[i]._id%>"><img class = "notCollected" id="indexpics" src="<%=birds[i].image%>" alt=""></a></li>
+           <li><%=birds[i].name%></li>
+           <br>
+           
         <% } %>
 
-        <li><%=birds[i].name%></li>
+        
         
         <form action="/<%=birds[i]._id%>?_method=DELETE" method="POST">
           <input class="delete" type="submit" value="DELETE" />
