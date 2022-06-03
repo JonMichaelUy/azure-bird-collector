@@ -2,7 +2,7 @@
 
 I'm a nature lover and one of the things I enjoy doing is sitting in my backyard and watching the birds that come visit. I've seen several different kinds, but I know there's a lot more out there!  I created this full-CRUD  Bird Collector app as a way to keep track of all the different birds i've seen.  The user has the ability to add birds to the database, and, once the user has seen the bird in real life, they can 'add' this bird to their collection.
 
-Technologies used:  EJS, JavaScript, CSS, HTML, Heroku
+Technologies used:  EJS, JavaScript, CSS, HTML, Mongoose, MongoDB, Heroku
 
 
 Screenshots:
