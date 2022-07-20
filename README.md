@@ -1,4 +1,4 @@
-# birdCollector
+# Learning to Deploy an App using Microsoft Azure Cloud Computing Services
 
 This is a redeployment of my unit 2 project,  Bird Collector App,  using Microsoft Azure! For this Azure Cloud module, I only had a few days to quickly learn azure from scratch using the azure tutorials. I was able to set up an Ubuntu Virtual Machine, deploy my app using the Azure app service and cosmosDB. I also implemented Azure Key Vault to hide my database connection as a secret, and create a blob storage service to store photos.
 
