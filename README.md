@@ -1,8 +1,8 @@
 # birdCollector
 
-I'm a nature lover and one of the things I enjoy doing is sitting in my backyard and watching the birds that come visit. I've seen several different kinds, but I know there's a lot more out there!  I created this full-CRUD  Bird Collector app as a way to keep track of all the different birds i've seen.  The user has the ability to add birds to the database, and, once the user has seen the bird in real life, they can 'add' this bird to their collection.
+This is a redeployment of my unit 2 project,  Bird Collector App,  using Microsoft Azure! For this Azure Cloud module, I only had a few days to quickly learn azure from scratch using the azure tutorials. I was able to set up an Ubuntu Virtual Machine, deploy my app using the Azure app service and cosmosDB. I also implemented Azure Key Vault to hide my database connection as a secret, and create a blob storage service to store photos.
 
-Technologies used:  EJS, JavaScript, CSS, HTML, Mongoose, MongoDB, Heroku
+Technologies used:  EJS, JavaScript, CSS, HTML, Mongoose, MongoDB, Heroku, Azure
 
 
 Screenshots:
